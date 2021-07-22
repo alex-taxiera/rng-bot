@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Drawing {
+  id              Int       @default(autoincrement()) @id
+  code            String
+  endTime         DateTime
+  guildId         String
+  description     String
+  entrants        User[]    @relation("_UserEnteredDrawings")
+  winners         User[]    @relation("_UserWonDrawings")
+  amountOfWinners Int
+}
+
+model User {
+  id        Int       @default(autoincrement()) @id
+  discordId String    @unique
+  drawings  Drawing[] @relation("_UserEnteredDrawings")
+  won       Drawing[] @relation("_UserWonDrawings")
+}

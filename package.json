@@ -1,0 +1,39 @@
+{
+  "name": "rng-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^2.27.0",
+    "config": "^3.3.6",
+    "discord.js": "github:discordjs/discord.js",
+    "docker-secret-env": "^0.2.1",
+    "luxon": "^2.0.1"
+  },
+  "devDependencies": {
+    "@alex-taxiera/eslint-config-ts": "^1.3.2",
+    "@types/config": "0.0.39",
+    "@types/luxon": "^1.27.1",
+    "@types/node": "^16.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-modules-newline": "0.0.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "prisma": "^2.27.0",
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+}

@@ -1,0 +1,18 @@
+env:
+  es6: true
+parserOptions:
+  ecmaVersion: esnext
+  sourceType: module
+ignorePatterns:
+  - dist
+extends:
+  - '@alex-taxiera/eslint-config-cjs'
+overrides:
+  -
+    files:
+      - '*.ts'
+    parserOptions:
+      project:
+        - ./tsconfig.json
+    extends:
+      - '@alex-taxiera/eslint-config-ts'
